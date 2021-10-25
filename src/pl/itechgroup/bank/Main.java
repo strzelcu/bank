@@ -1,18 +1,23 @@
 package pl.itechgroup.bank;
 
-import java.time.LocalDate;
-
 public class Main {
 
     public static void main(String[] args) {
+        //        showOddNumbersWhile();
+        showOddNumbersFor();
+    }
 
-        Account account = new Account("46105000026844962054474685", "PL46105000026844962054474685", 1000L);
-        account.getInfo();
+    static void showOddNumbersFor() {
+        for (int i = 1; i < 1000; i += 2) {
+            System.out.println(i);
+        }
+    }
 
-        Person person = new Person("Tomasz", "Strzelecki", 89040312312L, "Oleska 121, Opole");
-        person.getInfo();
-
-        Transfer transfer = new Transfer(200L, LocalDate.of(2021, 10, 25));
-        transfer.getInfo();
+    static void showOddNumbersWhile() {
+        int i = 1;
+        while (i < 1000) {
+            System.out.println(i);
+            i += 2;
+        }
     }
 }
