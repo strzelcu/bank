@@ -2,41 +2,40 @@ package pl.itechgroup.bank;
 
 public class Main {
 
-    public enum DniTygodnia {
-        PN("PN", "Poniedziałek", 1),
-        WT("WT", "Wtorek", 2),
-        SR("SR", "Środa", 3),
-        CZ("CZ", "Czwartek", 4),
-        PT("PT", "Piątek", 5),
-        SB("SB", "Sobota", 6),
-        ND("ND", "Niedziela", 7);
-
-        String code;
-        String name;
-        int number;
-
-        DniTygodnia(String code, String name, int number) {
-            this.code = code;
-            this.name = name;
-            this.number = number;
-        }
-
-    }
-
     public static void main(String[] args) {
 
-        for (DniTygodnia dzien:
-             DniTygodnia.values()) {
-            System.out.println(dzien.name);
-            switch (dzien.number) {
-                case 6:
-                case 7:
-                    System.out.println("Weekend!");
-                    break;
-                default:
-                    System.out.println("Niestety musisz jeszcze popracować");
+        //countWithWhileWithoutContinueAndBreak(1000, 10);
+        countWithContinueAndBreak(1000, 10);
+    }
+
+    public static void countWithContinueAndBreak(int quantity, int divider) {
+
+        int i = 1, j = 1;
+        while (true) {
+            if (i % divider == 0) {
+                System.out.printf("Liczba nr %s: %s%n", j, i);
+                j++;
+            }
+            i++;
+            if (j <= quantity) {
+                continue;
+            } else {
+                break;
             }
         }
 
     }
+
+    public static void countWithWhileWithoutContinueAndBreak(int quantity, int divider) {
+        int i = 1;
+        int j = 1;
+        while (j <= quantity) {
+            if (i % divider == 0) {
+                System.out.printf("Liczba nr %s: %s%n", j, i);
+                j++;
+            }
+            i++;
+        }
+    }
+
 }
