@@ -15,6 +15,6 @@ public class Person {
     }
 
     public void getInfo() {
-        System.out.println("Imię: " + name + " Nazwisko: " + surname + " PESEL: " + pesel + " Adres: " + address);
+        System.out.println(String.format("Imię: %s Nazwisko: %s PESEL: %s Adres %s", name, surname, pesel, address));
     }
 }

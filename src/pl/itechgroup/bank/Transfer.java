@@ -1,7 +1,6 @@
 package pl.itechgroup.bank;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Transfer {
 
@@ -14,6 +13,6 @@ public class Transfer {
     }
 
     public void getInfo() {
-        System.out.println("Transfer with ammount " + ammount + " on " + date.toString());
+        System.out.println(String.join(" ", "Transfer with ammount", String.valueOf(ammount), "on", date.toString()));
     }
 }

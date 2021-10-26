@@ -13,7 +13,14 @@ public class Account {
     }
 
     public void getInfo() {
-        System.out.println("Numer konta: " + number + " Iban: " + iban + " Saldo: " + balance);
+        StringBuilder sb = new StringBuilder();
+        sb.append("Numer konta: ");
+        sb.append(number);
+        sb.append(" Iban: ");
+        sb.append(iban);
+        sb.append(" Saldo: ");
+        sb.append(balance);
+        System.out.println(sb);
     }
 
 }
