@@ -4,38 +4,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //countWithWhileWithoutContinueAndBreak(1000, 10);
-        countWithContinueAndBreak(1000, 10);
-    }
+        Object[][] table = new Object[][] { new Integer[] { 1, 2, 3, 4, 5 }, new Boolean[] { true, false, true, false }, new String[] { "Tak", "Nie", "Tak" } };
 
-    public static void countWithContinueAndBreak(int quantity, int divider) {
-
-        int i = 1, j = 1;
-        while (true) {
-            if (i % divider == 0) {
-                System.out.printf("Liczba nr %s: %s%n", j, i);
-                j++;
-            }
-            i++;
-            if (j <= quantity) {
-                continue;
-            } else {
-                break;
+        for (Object[] objects : table) {
+            for (Object object : objects) {
+                System.out.println(object);
             }
         }
 
-    }
-
-    public static void countWithWhileWithoutContinueAndBreak(int quantity, int divider) {
-        int i = 1;
-        int j = 1;
-        while (j <= quantity) {
-            if (i % divider == 0) {
-                System.out.printf("Liczba nr %s: %s%n", j, i);
-                j++;
-            }
-            i++;
-        }
     }
 
 }
